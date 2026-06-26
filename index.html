@@ -497,7 +497,8 @@
         </div>
       </div>
 
-      <form class="intake-form" id="intakeForm">
+      <form class="intake-form" id="intakeForm" name="consultation" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="consultation">
         <div class="field">
           <label for="name">Full name</label>
           <input id="name" name="name" type="text" required>
@@ -612,15 +613,10 @@
   document.getElementById('intakeForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const formData = new FormData(this);
-    fetch('send-consultation.php', { method: 'POST', body: formData })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          showToast("Thanks -- your consultation request has been received. We'll be in touch within one business day.");
-          this.reset();
-        } else {
-          showToast("Something went wrong. Please call us at (832) 335-4098.");
-        }
+    fetch('/', { method: 'POST', body: formData })
+      .then(() => {
+        showToast("Thanks -- your consultation request has been received. We'll be in touch within one business day.");
+        this.reset();
       })
       .catch(() => {
         showToast("Something went wrong. Please call us at (832) 335-4098.");
