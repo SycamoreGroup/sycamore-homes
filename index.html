@@ -4,7 +4,7 @@
 <!--
   SYCAMORE GROUP - INTEGRATED SYCAMORE GROUP LLC
   Website: integratedsycamore.com | Last updated: August 2026
- 
+
   FILES TO UPLOAD - all in the SAME server folder:
     index.html      = this file
     logo.webp       = full brand mark (hero section)
@@ -13,7 +13,7 @@
     tree_gold.png   = PNG fallback of gold tree
     tree_cream.webp = cream tree (spare / alternative)
     tree_dark.webp  = dark tree on light backgrounds
- 
+
   QUICK-FIND GUIDE - search these strings to jump to a section:
     Phone numbers  = "335-4098"  (appears ~8 times)
     Colours        = ":root {"
@@ -192,10 +192,10 @@ p  { margin: 0; }
 }
 .btn-primary { background: var(--forest); color: #fff; border-color: var(--forest); }
 .btn-primary:hover { background: var(--forest-mid); transform: translateY(-1px); }
-.btn-gold { background: var(--gold); color: var(--forest-deep); border-color: var(--gold); }
+.btn-gold { background: var(--gold); color: var(--forest-deep); border-color: var(--gold); font-weight: 700; letter-spacing: 0.05em; }
 .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
-.btn-ghost { border-color: rgba(226,207,160,0.5); color: var(--gold-light); }
-.btn-ghost:hover { background: rgba(226,207,160,0.1); border-color: var(--gold-light); }
+.btn-ghost { border-color: rgba(226,207,160,0.85); color: var(--gold-light); font-weight: 600; }
+.btn-ghost:hover { background: rgba(226,207,160,0.15); border-color: var(--gold-light); }
 .btn-outline { border-color: var(--forest); color: var(--forest); background: transparent; }
 .btn-outline:hover { background: var(--forest); color: #fff; }
 
@@ -247,14 +247,15 @@ nav.primary a:hover::after { transform: scaleX(1); }
 .nav-actions { display: flex; align-items: center; gap: var(--s3); flex-shrink: 0; }
 .nav-actions-mobile { display: none; }
 .nav-divider { width: 1px; height: 20px; background: rgba(29,59,42,0.15); }
-.nav-call { display: flex; flex-direction: column; line-height: 1.2; text-decoration: none; }
+.nav-call { display: flex; flex-direction: column; line-height: 1; text-decoration: none; justify-content: center; gap: 2px; }
 .nav-call-label {
-  font-family: var(--sub); font-size: 0.6rem; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bark);
+  font-family: var(--sub); font-size: 0.58rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--bark); display: block; line-height: 1;
 }
 .nav-call-number {
-  font-family: var(--sub); font-size: 0.88rem; font-weight: 700;
-  color: var(--forest); white-space: nowrap;
+  font-family: var(--sub); font-size: 0.9rem; font-weight: 700;
+  color: var(--forest); white-space: nowrap; display: block; line-height: 1;
 }
 .nav-cta {
   background: var(--forest);
@@ -393,8 +394,8 @@ nav.primary a:hover::after { transform: scaleX(1); }
   font-family: var(--body);
   font-size: 1.08rem; max-width: 500px;
   margin-top: var(--s3);
-  color: rgba(245,239,230,0.78);
-  font-weight: 300; line-height: 1.76;
+  color: rgba(245,239,230,0.96);
+  font-weight: 400; line-height: 1.76;
 }
 
 .hero-actions { display: flex; gap: var(--s2); margin-top: var(--s4); flex-wrap: wrap; }
@@ -413,7 +414,7 @@ nav.primary a:hover::after { transform: scaleX(1); }
 .hero-strip span {
   font-family: var(--sub); font-size: 0.75rem; font-weight: 500;
   letter-spacing: 0.06em;
-  color: rgba(245,239,230,0.5); margin-top: 3px;
+  color: rgba(245,239,230,0.88); margin-top: 3px;
 }
 
 /* Hero logo art */
@@ -428,8 +429,8 @@ nav.primary a:hover::after { transform: scaleX(1); }
   background: var(--forest);
   color: var(--linen);
 }
-.alt .eyebrow { color: var(--gold); }
-.alt .section-head p { color: rgba(245,239,230,0.65); }
+.alt .eyebrow { color: var(--gold-light); }
+.alt .section-head p { color: rgba(245,239,230,0.85); font-weight: 400; }
 .alt h2 { color: var(--parchment); }
 
 /* Decorative root SVG divider */
@@ -449,16 +450,17 @@ nav.primary a:hover::after { transform: scaleX(1); }
   transform: translateY(-2px);
 }
 .service-card .num {
-  font-family: var(--serif); font-size: 0.9rem; font-style: italic;
-  color: var(--gold); display: block; margin-bottom: var(--s2);
+  font-family: var(--sub); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold-light); display: block; margin-bottom: var(--s2);
 }
 .service-card h3 {
-  font-size: 1.05rem; color: var(--parchment);
-  margin-bottom: var(--s1); font-weight: 500;
+  font-size: 1.08rem; color: #fff;
+  margin-bottom: var(--s1); font-weight: 600;
 }
 .service-card p {
-  font-family: var(--body); font-size: 0.87rem;
-  color: rgba(245,239,230,0.58); margin: 0; line-height: 1.65;
+  font-family: var(--body); font-size: 0.9rem;
+  color: rgba(245,239,230,0.9); margin: 0; line-height: 1.68;
 }
 @media (max-width: 960px) { .service-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 520px)  { .service-grid { grid-template-columns: 1fr; } }
@@ -472,10 +474,10 @@ nav.primary a:hover::after { transform: scaleX(1); }
   border-radius: var(--radius); padding: var(--s5) var(--s4);
 }
 .panel h3 {
-  font-size: 1.5rem; margin-bottom: var(--s2);
-  color: var(--forest);
+  font-size: 1.55rem; margin-bottom: var(--s2);
+  color: var(--forest); font-weight: 600;
 }
-.panel p { font-family: var(--body); color: var(--ink-light); font-size: 1rem; line-height: 1.72; }
+.panel p { font-family: var(--body); color: var(--ink-mid); font-size: 1rem; line-height: 1.72; }
 @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
 
 /* ══ SECTION: APPROACH (on parchment) ═══════════════════════ */
@@ -486,13 +488,16 @@ nav.primary a:hover::after { transform: scaleX(1); }
   border-bottom: 1px solid rgba(29,59,42,0.08);
 }
 .approach-num {
-  font-family: var(--serif); font-size: 1.2rem; font-style: italic;
-  color: var(--gold); flex-shrink: 0; width: 30px; padding-top: 2px;
+  font-family: var(--sub); font-size: 1rem; font-weight: 700;
+  color: var(--forest); flex-shrink: 0; width: 32px; padding-top: 3px;
+  background: var(--gold-pale); border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  height: 28px;
 }
-.approach-item h4 { margin-bottom: 5px; color: var(--forest); font-size: 1.05rem; }
+.approach-item h4 { margin-bottom: 6px; color: var(--forest); font-size: 1.1rem; font-weight: 600; }
 .approach-item p {
   font-family: var(--body); font-size: 0.92rem;
-  color: var(--ink-light); margin: 0; line-height: 1.68;
+  color: var(--ink-mid); margin: 0; line-height: 1.68;
 }
 @media (max-width: 720px) { .approach { grid-template-columns: 1fr; } }
 
@@ -551,7 +556,7 @@ nav.primary a:hover::after { transform: scaleX(1); }
 .faq-q {
   width: 100%; text-align: left; background: none; border: none; cursor: pointer;
   padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
-  font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
+  font-family: var(--serif); font-size: 1.22rem; font-weight: 600;
   color: var(--ink); transition: color .2s ease;
 }
 .faq-q:hover { color: var(--forest); }
@@ -562,8 +567,8 @@ nav.primary a:hover::after { transform: scaleX(1); }
 .faq-item[open] .faq-q .plus { transform: rotate(45deg); }
 .faq-a {
   font-family: var(--body);
-  padding: 0 0 var(--s3); color: var(--ink-light);
-  font-size: 0.97rem; max-width: 660px; line-height: 1.72;
+  padding: 0 0 var(--s3); color: var(--ink-mid);
+  font-size: 1rem; max-width: 660px; line-height: 1.72;
 }
 
 /* ══ CONTACT ══════════════════════════════════════════════════ */
